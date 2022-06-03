@@ -332,6 +332,13 @@ static void Sys_GetBasedir (char *argv0, char *dst, size_t dstsize)
 
 void Sys_Init (void)
 {
+	/* Chdir into the requested game dir */
+	const char* workdir = NULL;
+	if ((workdir = COM_GetParm("-workdir")) && chdir(workdir) != 0)
+	{
+		Sys_Error("Failed to chdir to workdir '%s': %s\n", workdir, strerror(errno));
+	}
+	
 	memset (cwd, 0, sizeof (cwd));
 	Sys_GetBasedir (host_parms->argv[0], cwd, sizeof (cwd));
 	host_parms->basedir = cwd;

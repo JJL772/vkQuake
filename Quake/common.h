@@ -229,6 +229,7 @@ extern int safemode;
  */
 
 int COM_CheckParm (const char *parm);
+const char* COM_GetParm (const char* parm);
 
 void COM_Init (void);
 void COM_InitArgv (int argc, char **argv);

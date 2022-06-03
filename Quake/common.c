@@ -1270,6 +1270,14 @@ int COM_CheckParm (const char *parm)
 	return COM_CheckParmNext (0, parm);
 }
 
+const char* COM_GetParm (const char* parm)
+{
+	int i = COM_CheckParm(parm);
+	if (i != 0 && i < com_argc-1 && com_argv[i+1][0] != '-')
+		return com_argv[i+1];
+	return NULL;
+}
+
 /*
 ================
 COM_CheckRegistered

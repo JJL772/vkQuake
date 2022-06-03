@@ -220,6 +220,13 @@ void Sys_Init (void)
 {
 	Sys_SetTimerResolution ();
 	Sys_SetDPIAware ();
+	
+	/* Chdir into the requested game dir */
+	const char* workdir = NULL;
+	if ((workdir = COM_GetParm("-workdir")) && _chdir(workdir) != 0)
+	{
+		Sys_Error("Failed to chdir to workdir '%s': %s\n", workdir, strerror(errno));
+	}
 
 	memset (cwd, 0, sizeof (cwd));
 	Sys_GetBasedir (NULL, cwd, sizeof (cwd));
