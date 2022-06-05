@@ -61,7 +61,8 @@
                 "databaseFilename": ""
             },
             "cStandard": "gnu99",
-            "cppStandard": "c++98"
+            "cppStandard": "c++98",
+            "compileCommands": "${workspaceRoot}/compile_commands.json"
         },
         {
             "name": "Win32",
