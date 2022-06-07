@@ -28,3 +28,4 @@ build/
 CMakeLists.txt
 history.txt
 compile_commands.json
+vkquake.*

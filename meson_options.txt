@@ -1,0 +1,59 @@
+option('wave',
+  type : 'boolean',
+  value : true,
+  description : 'Use wave audio'
+)
+
+option('flac',
+  type : 'boolean',
+  value : false,
+  description : 'Use FLAC audio'
+)
+
+option('mp3',
+  type : 'boolean',
+  value : true,
+  description : 'Use MP3 audio'
+)
+
+option('vorbis',
+  type : 'boolean',
+  value : true,
+  description : 'Use vorbis audio'
+)
+
+option('opus',
+  type : 'boolean',
+  value : false,
+  description : 'Use opus audio'
+)
+
+option('mikmod',
+  type : 'boolean',
+  value : false,
+  description : 'Use mikmod audio'
+)
+
+option('modplug',
+  type : 'boolean',
+  value : false,
+  description : 'Use opus audio'
+)
+
+option('xmp',
+  type : 'boolean',
+  value : false,
+  description : 'Use xmp audio'
+)
+
+option('modplug',
+  type : 'boolean',
+  value : false,
+  description : 'Use modplug audio'
+)
+
+option('umx',
+  type : 'boolean',
+  value : false,
+  description : 'Use umx audio'
+)

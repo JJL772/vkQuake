@@ -1,6 +1,10 @@
 #!/bin/sh
 
+set -e
+
 # Change this script to meet your needs and/or environment.
+
+cd "$(dirname "$0")"
 
 TARGET=i686-w64-mingw32
 PREFIX=/opt/cross_win32
